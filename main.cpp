@@ -45,7 +45,7 @@ int main() {
                     Utilities::viewStudentRecord();
                     break;
                 case 5:
-                    //Utilities::courseCatalog.courseCatalog();
+                    Utilities::courseCatalogMenu();
                     break;
                 case 6: 
                     break;

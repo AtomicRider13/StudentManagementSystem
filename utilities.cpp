@@ -1,6 +1,9 @@
 #include "utilities.h"
 #include <iostream>
 #include <iomanip>
+#include <ctime> // For std::time
+#include <cstdlib> // For std::rand, std::srand
+#include <algorithm> // For std::find
 
 using namespace std;
 
@@ -36,6 +39,7 @@ namespace Utilities {
         std::vector<Student> allStudents;
         int numStudents = 50;
         int numCoursesPerStudent = 5;
+        
 
         std::srand(std::time(nullptr)); // Seed the random number generator
 
@@ -265,7 +269,7 @@ namespace Utilities {
     }
 
 
-    /*void courseCatalog() {
+    void courseCatalogMenu() {
         int selection;
         do { 
             clearScreen();
@@ -299,7 +303,7 @@ namespace Utilities {
         } while (selection != 4); // Keep looping until the user chooses to return to the main menu
 
         clearScreen();
-    }*/
+    }
 
     void viewCourseCatalog() {
         clearScreen();
@@ -354,6 +358,8 @@ namespace Utilities {
                 if (it->getCourseSymbol() == courseSymbol) {
                     it = courses.erase(it);
                     cout << "Course " << courseSymbol <<" has been removed from the Course Catalog\n";
+                    waitForEnter();
+                    clearScreen();
                     return;
                 } else {
                     it++;

@@ -8,9 +8,10 @@
 
 namespace Utilities {
 
+    // Declare CourseCatalog object
     extern CourseCatalog courseCatalog;
 
-    std::string generateRandomString();
+    // Declare utility functions
     void initializeData();
     void clearScreen();
     void login();
@@ -20,12 +21,13 @@ namespace Utilities {
     void viewStudentRecord();
     void enrollStudentIntoCourse(int studentID);
     void disenrollStudentFromCourse(int studentID);
-    //void courseCatalog();
+    void courseCatalogMenu();
     void viewCourseCatalog();
     void addCourseToCatalog();
     void removeCourseFromCatalog();
     void waitForEnter();
 
+    // Declare external variables
     extern int nextId;
     extern int selection;
     extern std::string username;
@@ -33,7 +35,6 @@ namespace Utilities {
     extern bool authenticated;
     extern std::vector<Student> students;
     extern std::vector<Course> courses;
-    
 
 }
 
